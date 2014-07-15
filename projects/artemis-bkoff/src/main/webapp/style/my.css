@@ -1,0 +1,42 @@
+.nav-tabs {
+	padding: 2px 0 0 10px;
+	border-bottom: 1px solid #ddd;
+	display: table;
+	position:relative;
+	width: 99%;
+}
+
+.nav-tabs>li {
+	position: relative;
+	display: block;
+	float: left;
+	margin-bottom: -1px;
+	margin-left: 3px;
+}
+
+
+.nav-tabs>li>a:hover,.nav-tabs>li>a:focus {
+	text-decoration: none;
+	background-color: #fff;
+	color: #105DDD;
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	
+}
+
+.nav-tabs>li>a {
+	position: relative;
+	display: block;
+	padding: 8px 16px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+li.active a {
+	background-color: #fff;
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	font-weight: bold;
+}

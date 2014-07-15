@@ -1,0 +1,131 @@
+a {
+    color: #344889;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    background-color: #FFFFFF;
+}
+.wt-city {
+    height: 28px;
+    margin: 0 0 0 5px;
+    position: relative;
+    width: 110px;
+    z-index: 100;
+    float: left;
+}
+.wt-city .city-current {
+    background: url("../images/m.png") no-repeat scroll 0 -120px transparent;
+    color: #535353;
+    cursor: pointer;
+    float: left;
+    font: bold 14px "宋体";
+    height: 17px;
+    padding: 7px 5px 6px 7px;
+    white-space: nowrap;
+    width:68px;
+    text-align: center;
+}
+.wt-city .city-current:hover {
+    text-decoration: none;
+}
+.wt-city .city-border {
+    height: 31px;
+    position: relative;
+    z-index: 11;
+}
+.wt-city .city-border-mid {
+    background-color: #FFFFFF;
+    border-top: 1px solid #FC6B52;
+    float: left;
+    height: 31px;
+    padding-top: 2px;
+}
+.wt-city .city-border-left {
+    background: url("../images/m.png") no-repeat scroll -160px -110px transparent;
+    float: left;
+    height: 31px;
+    width: 3px;
+}
+.wt-city .city-border-right {
+    background: url("../images/m.png") no-repeat scroll -163px -110px transparent;
+    float: left;
+    height: 31px;
+    width: 3px;
+}
+.wt-city .downtip {
+    background: url("../images/m.png") no-repeat scroll -108px -120px transparent;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    width: 24px;
+}
+.wt-city .uptip {
+    background: url("../images/m.png") no-repeat scroll -132px -120px transparent;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    width: 24px;
+}
+.city-div-new {
+    background-color: #FFFFFF;
+    border: 1px solid #FC6B52;
+    left: 0;
+    padding: 10px 10px 5px;
+    position: absolute;
+    top: 30px;
+    width: 550px;
+    z-index: 10;
+}
+.city-div-new .title {
+    border-bottom: 1px solid #E9E9E9;
+    color: #777777;
+    font-size: 14px;
+    height: 26px;
+    margin-bottom: 3px;
+}
+.city-div-new .city-con {
+    padding: 10px 0 5px;
+}
+.city-div-new .all-letter {
+    background-color: #E9E9E9;
+    font: bold 14px Arial;
+    height: 20px;
+    overflow: hidden;
+    padding: 8px 6px 6px;
+    text-align: center;
+}
+.city-div-new .all-letter .letter {
+    color: #505F8F;
+    float: left;
+    height: 18px;
+    margin: 0 3px;
+    width: 18px;
+}
+.city-div-new .all-letter .current {
+    background: url("../images/m.png") no-repeat scroll -210px -50px transparent;
+    color: #FFFFFF;
+}
+.city-div-new .city-span {
+    float: left;
+    height: 30px;
+    text-align: center;
+    width: 60px;
+}
+.city-div-new .city-a {
+    font-size: 14px;
+}
+.city-div-new .all-city-con .current{
+    background: url("../images/m.png") no-repeat scroll -100px -50px transparent;
+    color: #FFFFFF;
+}
+.city-div-new .all-city-con .hover {
+    background-color: #105DDD;
+    color: #FFFFFF;
+}
+.hide {
+    display: none;
+}
+.clear {
+    clear: both;
+}

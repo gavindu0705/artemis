@@ -1,0 +1,645 @@
+@IMPORT url("jquery.datepick.css");
+html * {
+	margin: 0;
+	/*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+/* GENERAL */
+.spinner {
+	padding: 5px;
+	position: absolute;
+	right: 0;
+}
+
+body {
+	background: #fff;
+	color: #333;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+a:link,a:visited {
+	color: #105DDD;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+	background-color: #105DDD;
+}
+
+h1 {
+	color: #006dba;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+ul {
+	padding-left: 15px;
+}
+
+textarea {
+	height: 150px;
+	vertical-align: top;
+}
+
+input:focus,select:focus,textarea:focus {
+	background-color: #FFCC99;
+}
+
+img {
+	border: none;
+}
+
+form {
+	display: inline;
+	margin: 0;
+}
+
+.nav {
+	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+	border: 1px solid #ccc;
+	border-style: solid none solid none;
+	margin-top: 5px;
+	padding: 7px 16px;
+}
+
+.menuButton {
+	font-size: 16px;
+	padding: 5px 5px;
+}
+
+.menuButton a {
+	color: #333;
+	padding: 4px 6px;
+	margin-right: 10px;
+}
+
+.menuButton a.home {
+	background: url(../images/skin/house.png) center left no-repeat;
+	color: #333;
+	padding-left: 20px;
+}
+
+.menuButton a.list {
+	background: url(../images/skin/database_table.png) center left no-repeat
+		;
+	color: #333;
+	padding-left: 20px;
+}
+
+.menuButton a.create {
+	background: url(../images/skin/database_add.png) center left no-repeat;
+	color: #333;
+	padding-left: 20px;
+}
+
+/* MESSAGES AND ERRORS */
+.message {
+	background: #f3f8fc url(../images/skin/information.png) 8px 50%
+		no-repeat;
+	border: 1px solid #b2d1ff;
+	color: #006dba;
+	margin: 10px 0 5px 0;
+	padding: 5px 5px 5px 30px
+}
+
+div.errors {
+	background: #fff3f3 url(../images/skin/information.png) 8px 50%
+		no-repeat;
+	border: 1px solid red;
+	color: #cc0000;
+	margin: 10px 0 5px 0;
+	padding: 5px 5px 5px 30px
+}
+
+div.errors ul {
+	list-style: none;
+	padding: 0;
+}
+
+div.errors li {
+	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
+	line-height: 16px;
+	padding-left: 30px;
+}
+
+td.errors select {
+	border: 1px solid red;
+}
+
+td.errors input {
+	border: 1px solid red;
+}
+
+/* TABLES */
+table {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+}
+
+tr {
+	border: 0;
+}
+
+td,th {
+	padding: 2px 3px;
+	text-align: left;
+}
+
+th {
+	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 2px 6px;
+}
+
+th a:link,th a:visited,th a:hover {
+	display: block;
+	font-size: 16px;
+	text-decoration: none;
+	width: 100%;
+	color: #333;
+}
+
+th a:hover {
+	color: white;
+}
+
+th.asc a,th.desc a {
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+th.asc a {
+	background-image: url(../images/skin/sorted_asc.gif);
+}
+
+th.desc a {
+	background-image: url(../images/skin/sorted_desc.gif);
+}
+
+.odd {
+	background: #F7F0D0;
+}
+
+.bottom {
+	border-bottom: 1px solid #EEE;
+}
+
+.even {
+	background: #fff;
+}
+
+/* LIST */
+.list table,table.list {
+	border-collapse: collapse;
+}
+
+.list tfoot td {
+	border-top: 1px solid #EEE;
+	background: url("../images/skin/shadow.jpg") repeat scroll 0 0 #FFFFFF;
+}
+
+caption {
+	text-align: left;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 2px 6px 2px 6px;
+}
+
+.list caption {
+	padding-left: 22px;
+	background: url(../images/skin/database_table.png) 2px 2px no-repeat;
+}
+
+.list th,.list td {
+	border-right: 1px solid #ddd;
+}
+
+.list th:hover,.list tr:hover {
+	background-color: #b2d1ff;
+}
+
+.list th:hover,.list td:hover {
+	background: #82c1ef;
+}
+
+/* PAGINATION */
+.pagination-page {
+	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+	border-bottom: 1px solid #ccc;
+	color: #666;
+	font-size: 16px;
+	overflow: hidden;
+	padding: 2px 3px;
+}
+
+.pagination-page .page-num,.pagination-page .previous,.pagination-page .next
+	{
+	background: #fff;
+	border: 1px solid #ccc;
+	border-color: #ccc #aaa #aaa #ccc;
+	color: #666;
+	margin: 0 3px;
+	padding: 2px 6px;
+}
+
+.pagination-page .current-page {
+	padding: 2px 3px;
+	color: #666;
+	background: #fff;
+	font-weight: bold;
+}
+
+/* DIALOG */
+.dialog table {
+	
+}
+
+.prop {
+	padding: 5px;
+}
+
+.prop .name {
+	text-align: left;
+	width: 15%;
+	white-space: nowrap;
+}
+
+.prop .value {
+	text-align: left;
+	width: 85%;
+}
+
+/* ACTION BUTTONS */
+.buttons {
+	background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+	border: 1px solid #ccc;
+	color: #666;
+	font-size: 16px;
+	margin-top: 5px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.buttons input {
+	background: #fff;
+	border: 0;
+	color: #333;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 3px;
+	overflow: visible;
+	padding: 2px 6px;
+}
+
+.buttons input.delete {
+	background: transparent url(../images/skin/database_delete.png) 5px 50%
+		no-repeat;
+	padding-left: 28px;
+}
+
+.buttons input.edit {
+	background: transparent url(../images/skin/database_edit.png) 5px 50%
+		no-repeat;
+	padding-left: 28px;
+}
+
+.buttons input.save {
+	background: transparent url(../images/skin/database_save.png) 5px 50%
+		no-repeat;
+	padding-left: 28px;
+}
+
+.buttons input.create {
+	background: transparent url(../images/skin/database_add.png) 5px 50%
+		no-repeat;
+	padding-left: 28px;
+}
+
+.redstar {
+	color: #F82900;
+	font-weight: 400;
+}
+
+.bg_blue {
+	BACKGROUND-COLOR: #d2e4fc
+}
+
+.smaller {
+	FONT-SIZE: 10pt
+}
+
+.bg_white {
+	BACKGROUND-COLOR: #ffffff
+}
+
+.bg_100_capacity {
+	BACKGROUND-COLOR: #ccff66
+}
+
+.bg_gray {
+	BACKGROUND-COLOR: #c0c0c0
+}
+
+.bg_under_capacity {
+	BACKGROUND-COLOR: #ffffaa
+}
+
+.bg_over_capacity {
+	BACKGROUND-COLOR: #faebd7
+}
+
+.bg_holiday {
+	BACKGROUND-COLOR: #99ccff
+}
+
+.bg_red {
+	BACKGROUND-COLOR: #ff9999
+}
+
+.c-red {
+	color: red;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clr {
+	clear: both;
+}
+
+.dp-block {
+	display: block;
+}
+
+.dp-none {
+	display: none;
+}
+
+.width-auto {
+	width: auto;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.align-right,.right {
+	text-align: right;
+}
+
+.align-left,.left {
+	text-align: left;
+}
+
+.align-center,.center {
+	text-align: center;
+}
+
+.valign-middle {
+	vertical-align: middle;
+}
+
+/* 页面内容 */
+.main-content {
+	margin-left: 160px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding-bottom: 80px;
+	min-height: 587px;
+}
+
+/* 左侧菜单 start */
+.left-menu {
+	width: 150px;
+	float: left;
+	padding: 7px 5px;
+	overflow-x: auto;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.left-menu .menu {
+	
+}
+
+.left-menu .menu-title {
+	font-weight: bold;
+	color: #373737;
+}
+
+.left-menu .menu-item {
+	
+}
+
+/* 左侧菜单 end */ /* 自动完成 start */
+.jqac-menu {
+	color: #000;
+	z-index: 5000;
+	background-color: #fff;
+	font-size: 16px;
+	text-align: left;
+	overflow-x: hidden;
+	border: solid 1px #828282
+}
+
+.jqac-menu ul {
+	list-style: none;
+	overflow: hidden;
+	margin: 1px;
+	padding: 1px
+}
+
+.jqac-menu .jqac-link {
+	cursor: pointer;
+	display: block;
+	position: relative
+}
+
+.jqac-menu .jqac-highlight {
+	background-color: #e8e7e7
+}
+
+.jqac-menu .jqac-warning {
+	font-style: italic
+}
+
+.jqac-menu .jqac-loading {
+	font-style: italic;
+	text-decoration: blink
+}
+
+.jqac-menu .jqac-value {
+	text-align: left
+}
+
+.jqac-menu .jqac-info {
+	text-align: right;
+	color: #666;
+	position: absolute;
+	top: 0;
+	right: 0
+}
+
+/* 自动完成 end */ /* 图标按钮 start*/
+a.sync,a.close,a.open {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	padding: 8px;
+	margin: 3px;
+}
+
+a.jump {
+	padding-right: 16px;
+	background-image: url(../images/jump_icon.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+/* 头部 */
+.header {
+	padding-right: 20px;
+	height: 20px;
+}
+.header h2{
+	margin-top: 25px;
+	color: orange;
+	width: 60px;
+	font-family: "微软雅黑","黑体";
+}
+
+
+/* 选择城市*/
+.wt-city {
+    height: 28px;
+    margin: 0 0 0 5px;
+    position: relative;
+    width: 110px;
+    z-index: 100;
+    float: left;
+}
+.wt-city .city-current {
+    background: url("../images/m.png") no-repeat scroll 0 -120px transparent;
+    color: #535353;
+    cursor: pointer;
+    float: left;
+    font: bold 14px "宋体";
+    height: 17px;
+    padding: 7px 5px 6px 7px;
+    white-space: nowrap;
+    width:68px;
+    text-align: center;
+}
+.wt-city .city-current:hover {
+    text-decoration: none;
+}
+.wt-city .city-border {
+    height: 31px;
+    position: relative;
+    z-index: 11;
+}
+.wt-city .city-border-mid {
+    background-color: #FFFFFF;
+    border-top: 1px solid #FC6B52;
+    float: left;
+    height: 31px;
+    padding-top: 2px;
+}
+.wt-city .city-border-left {
+    background: url("../images/m.png") no-repeat scroll -160px -110px transparent;
+    float: left;
+    height: 31px;
+    width: 3px;
+}
+.wt-city .city-border-right {
+    background: url("../images/m.png") no-repeat scroll -163px -110px transparent;
+    float: left;
+    height: 31px;
+    width: 3px;
+}
+.wt-city .downtip {
+    background: url("../images/m.png") no-repeat scroll -108px -120px transparent;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    width: 24px;
+}
+.wt-city .uptip {
+    background: url("../images/m.png") no-repeat scroll -132px -120px transparent;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    width: 24px;
+}
+.city-div-new {
+    background-color: #FFFFFF;
+    border: 1px solid #FC6B52;
+    left: 0;
+    padding: 10px 10px 5px;
+    position: absolute;
+    top: 30px;
+    width: 550px;
+    z-index: 10;
+}
+.city-div-new .title {
+    border-bottom: 1px solid #E9E9E9;
+    color: #777777;
+    font-size: 14px;
+    height: 26px;
+    margin-bottom: 3px;
+}
+.city-div-new .city-con {
+    padding: 10px 0 5px;
+}
+.city-div-new .all-letter {
+    background-color: #E9E9E9;
+    font: bold 14px Arial;
+    height: 20px;
+    overflow: hidden;
+    padding: 8px 6px 6px;
+    text-align: center;
+}
+.city-div-new .all-letter .letter {
+    color: #505F8F;
+    float: left;
+    height: 18px;
+    margin: 0 3px;
+    width: 18px;
+}
+.city-div-new .all-letter .current {
+    background: url("../images/m.png") no-repeat scroll -210px -50px transparent;
+    color: #FFFFFF;
+}
+.city-div-new .city-span {
+    float: left;
+    height: 30px;
+    text-align: center;
+    width: 60px;
+}
+.city-div-new .city-a {
+    font-size: 14px;
+}
+.city-div-new .all-city-con .current{
+    background: url("../images/m.png") no-repeat scroll -100px -50px transparent;
+    color: #FFFFFF;
+}
+.city-div-new .all-city-con .hover {
+    background-color: #105DDD;
+    color: #FFFFFF;
+}
+.hide {
+    display: none;
+}
+.clear {
+    clear: both;
+}		

@@ -1,0 +1,8 @@
+body{margin:0px;padding:0px;}
+.top{width:100%;background:url(../image/topbg.gif) repeat-x; height:31px; line-height:31px;margin-bottom:50px;color:#fff; font-size:13px;margin-top:0px;text-align:left;}
+.top a:link{color:#fff;text-decoration:none;}
+.top a:visited{color:#fff;text-decoration:none;}
+.top a:hover{color:#fff;text-decoration:none;}
+.top a:active{color:#fff;text-decoration:none;}
+.top span{color:#fff;text-decoration:none;padding-left:100px;}
+

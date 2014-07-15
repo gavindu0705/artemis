@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="FILE" />
+	</appender>
+	<appender name="FILE" class="org.apache.log4j.ConsoleAppender">
+		<param name="File" value="D:/logs/artemis-plugin.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{MMdd HH:mm:ss\} %-5p] [%t] %c{3\} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="PerformanceFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="D:/logs/artemis-plugin.performance.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{MMdd HH:mm:ss\} %-5p] [%t] %c{3\} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="PrintFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="D:/logs/artemis-plugin.print.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{MMdd HH:mm:ss\} %-5p] [%t] %c{3\} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="PerformanceAync" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="PerformanceFile" />
+	</appender>
+	
+	<appender name="PrintAync" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="PrintFile" />
+	</appender>
+	
+	<logger name="performance" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="PerformanceAync" />
+	</logger>
+	
+	<logger name="print" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="PrintAync" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="ASYNC" />
+	</root>
+
+</log4j:configuration>

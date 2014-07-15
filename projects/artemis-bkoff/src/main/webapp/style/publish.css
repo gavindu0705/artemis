@@ -1,0 +1,5 @@
+.selcity{position:relative;}
+.nbox{float:left;padding-top: 5px;}
+.nbox ul {list-style-type: none; width: 320px;height: 410px;border: solid 1px;margin-bottom: 1px;margin-left: 1px;}
+.img{width: 319px;height: 300px;}
+.img_tab td{height: 150px;width: 105px;}

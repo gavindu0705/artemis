@@ -1,0 +1,50 @@
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>poseidon-bkoff</display-name>
+
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+		<param-value>zh-CN</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring.xml
+		</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.artemis.logs.Log4jConfigListener</listener-class>
+	</listener>
+  
+
+	<filter>
+		<filter-name>sothis</filter-name>
+		<filter-class>org.sothis.web.mvc.SothisFilter</filter-class>
+		<init-param>
+			<param-name>beanFactoryClass</param-name>
+			<param-value>org.sothis.web.mvc.support.SpringBeanFactory</param-value>
+		</init-param>
+		<init-param>
+			<param-name>configBeanName</param-name>
+			<param-value>propertyConfigurer</param-value>
+		</init-param>
+	</filter>
+
+
+	<filter-mapping>
+		<filter-name>sothis</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<session-config>   
+		<session-timeout>60</session-timeout>   
+	</session-config>
+	
+</web-app>

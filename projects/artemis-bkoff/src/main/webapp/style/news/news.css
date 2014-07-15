@@ -1,0 +1,213 @@
+table {
+    border: 1px solid #ccc;
+    width: 100%
+}
+tr {
+    border: 0;
+}
+td, th { 
+    font: 13px verdana, arial, helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 5px 6px;
+    text-align: left;
+    vertical-align:middle;
+}
+
+td input {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    margin: 0px;
+}
+th {
+    /* A background: #fff url(../images/skin/shadow.jpg) repeat-x;*/
+    /* B background: #fff url(../images/skin/shadow.gif) repeat-x;*/
+    /*background: #E9F0F6 url(../images/skin/titlebg.jpg) repeat-x scroll 0 0;
+    background: #DBF1D4 none repeat scroll 0% 0%;*/
+    background: #EEEEFF none repeat scroll 0% 0%;
+    color: #666;
+    font-size: 13px;
+    line-height: 17px;
+    text-align:center;
+    vertical-align: middle;
+    background-position:center;
+    padding: 2px 6px;
+}
+
+th a:link, th a:visited, th a:hover {
+    color: #333;
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    width: 100%;
+}
+
+th.asc a, th.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+th.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+}
+th.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+}
+
+.odd {
+    background: #f7f0d0;
+}
+.even {
+    background: #fff;
+}
+
+/* LIST */
+
+.list table {
+    border-collapse: collapse;
+    margin-top:3px;
+}
+.list th, .list td {
+    border-left: 1px solid #ddd;
+}
+.list th:hover, .list tr:hover {
+    background: #b2d1ff;
+}
+
+/* PAGINATION */
+
+.paginateButtons {
+    /* A background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;*/
+    /* B background: #fff url(../images/skin/shadow.gif) bottom repeat-x;*/
+    /*background: #E9F0F6 url(../images/skin/titlebg.jpg) repeat-x scroll 0 0;
+    background: #DBF1D4 none repeat scroll 0% 0%;*/
+    background: #EEEEFF none repeat scroll 0% 0%;
+    border: 1px solid #ccc;
+    border-top: 0;
+    color: #666;
+    font-size: 13px;
+    overflow: hidden;
+    padding: 5px 3px;
+}
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc #aaa #aaa #ccc;
+    text-decoration: none;
+    color: #666;
+    margin: 0 3px;
+    padding: 2px 6px;
+}
+.paginateButtons span {
+    padding: 2px 3px;
+}
+
+.city_tab {
+    BORDER-TOP: #3c78b5 1px solid; MARGIN-TOP: 2px; BACKGROUND-COLOR: #ffffff
+}
+
+.city_tab .tab_1{
+	
+}
+
+.city_tab ul {
+    PADDING-RIGHT: 0px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; FONT: bold 11px Verdana, sans-serif; MARGIN-LEFT: 0px; PADDING-TOP: 20px; BORDER-BOTTOM: #3c78b5 1px solid;
+}
+.city_tab ul li {
+    DISPLAY: inline-block; MARGIN: 0px; LIST-STYLE-TYPE: none;
+    vertical-align: bottom;
+}
+.city_tab ul li.ctab a {
+    BORDER-RIGHT: #3c78b5 1px solid; BORDER-TOP: #3c78b5 1px solid; BACKGROUND: #3c78b5; PADDING-BOTTOM: 3px; MARGIN-LEFT: 3px; BORDER-LEFT: #3c78b5 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #3c78b5 1px; TEXT-DECORATION: none;
+    float:left;line-height: 20px;width:25px; text-align: center;
+}
+.city_tab ul li.ctab a:link {
+    COLOR: #ffffff;
+}
+.city_tab ul li.ctab a:visited {
+    COLOR: #ffffff;
+}
+
+.city_tab ul li.ctab a:hover {
+    BORDER-LEFT-COLOR: #003366; BACKGROUND: #003366; BORDER-BOTTOM-COLOR: #003366; COLOR: #ffffff; BORDER-TOP-COLOR: #003366; BORDER-RIGHT-COLOR: #003366;
+}
+.city_tab ul li.ctab a.current {
+    BACKGROUND: white; COLOR: black; BORDER-BOTTOM: white 1px solid;
+}
+.city_tab ul li.ctab a.current:link {
+    COLOR: black;
+}
+.city_tab ul li.ctab a.current:visited {
+    COLOR: black;
+}
+.city_tab ul li.ctab a.current:hover {
+    BACKGROUND: white; COLOR: black; BORDER-BOTTOM: white 1px solid;
+}
+
+.news_left {
+    display: inline;
+    float: left;
+    width: 500px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.news_left table tr{
+	height: 16px;
+}
+
+.news_right {
+   float: left;
+   width: 580px;
+   padding-top: 5px;
+   margin-top: 10px;
+   border: 1px solid #CCC;
+}
+
+.news_sear{
+	padding-left: 10px;padding-bottom: 10px;
+}
+.news_sear input{
+	background-color:#FCFCFC;
+	border: 1px solid #CCC;
+	margin: 0px;
+}
+
+.news_list ul li{
+	height: 20px;
+	border: 1px solid #CCC;
+	list-style: none;
+}
+.news_tit{
+	cursor: pointer;
+	line-height: 20px;
+	float: left;
+	padding-left: 3px;
+	padding-right: 10px;
+}
+.news_tit:hover{
+	background-color:#105DDD;
+	text-decoration: none;
+}
+
+.news_date{
+	color:#9C9C9C;	
+	vertical-align: bottom;
+	padding-top: 5px;
+}
+
+.tit_inline{
+	display: inline;
+	width: 450px;
+}
+.tit_inline input{
+	float: left;
+}
+.tit_inline img{
+	float: left;
+	vertical-align: bottom;
+}
+
+.b_tit {width: 370px;height: 28px;line-height: 28px;font-size: 20px;border: 1px solid #ccc;text-decoration: underline;}
+.m_tit {width: 370px;height: 15px;border: 1px solid #ccc;text-decoration: underline;}
+.s_tit {width: 260px;height: 15px;border: 1px solid #ccc;text-decoration: underline;text-indent: 1px;}
+
+.lv_date{background-color: orange; font-weight: bold;}
+.lv_date a{float: right;font-weight: normal;}
