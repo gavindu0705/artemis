@@ -38,6 +38,8 @@ public class ProxyController {
 
 		model.setHttpAdslList(list);
 		model.setGrandCloudList(grandCloudDao.findAll());
+		
+		//sign by duxiaoyu@fangjia.com2
 		return model;
 	}
 
