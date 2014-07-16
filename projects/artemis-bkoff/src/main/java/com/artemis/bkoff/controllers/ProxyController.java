@@ -34,6 +34,7 @@ public class ProxyController {
 				return 0;
 			}
 		});
+		//sign by duxiaoyu@fangjia.com
 
 		model.setHttpAdslList(list);
 		model.setGrandCloudList(grandCloudDao.findAll());
