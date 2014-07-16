@@ -1,6 +1,11 @@
 package com.artemis.bkoff.controllers;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
 
 import com.artemis.bkoff.model.ProxyModel;
 import com.artemis.mongo.dao.GrandCloudDao;
@@ -15,7 +20,22 @@ public class ProxyController {
 	private GrandCloudDao grandCloudDao = GrandCloudDao.getInstance();
 
 	public Object listHttpAdslAction(ProxyModel model) {
-		model.setHttpAdslList(httpAdslDao.findAll());
+		List<HttpAdsl> list = httpAdslDao.findAll();
+		Collections.sort(list, new Comparator<HttpAdsl>() {
+			@Override
+			public int compare(HttpAdsl o1, HttpAdsl o2) {
+				int a1 = StringUtils.substringAfterLast(o1.getIp(), ".").hashCode();
+				int a2 = StringUtils.substringAfterLast(o2.getIp(), ".").hashCode();
+				if (a1 > a2) {
+					return 1;
+				} else if (a1 < a2) {
+					return -1;
+				}
+				return 0;
+			}
+		});
+
+		model.setHttpAdslList(list);
 		model.setGrandCloudList(grandCloudDao.findAll());
 		return model;
 	}
