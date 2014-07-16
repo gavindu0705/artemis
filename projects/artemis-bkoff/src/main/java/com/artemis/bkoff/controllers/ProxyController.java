@@ -19,9 +19,7 @@ public class ProxyController {
 	private HttpAdslDao httpAdslDao = HttpAdslDao.getInstance();
 	private GrandCloudDao grandCloudDao = GrandCloudDao.getInstance();
 
-	//test in github2
 	public Object listHttpAdslAction(ProxyModel model) {
-		//test in github1
 		List<HttpAdsl> list = httpAdslDao.findAll();
 		Collections.sort(list, new Comparator<HttpAdsl>() {
 			@Override
@@ -36,12 +34,10 @@ public class ProxyController {
 				return 0;
 			}
 		});
-		//sign by duxiaoyu@fangjia.com
 
 		model.setHttpAdslList(list);
 		model.setGrandCloudList(grandCloudDao.findAll());
 		
-		//sign by duxiaoyu@fangjia.com2
 		return model;
 	}
 
